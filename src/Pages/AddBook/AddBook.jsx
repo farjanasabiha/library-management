@@ -12,7 +12,6 @@ const AddBook = () => {
     const name = e.target.name.value;
     const short_description = e.target.short_description.value;
     const quantity_of_books = e.target.quantity_of_books.value;
-    // const rating = e.target.rating.value;
     const category = e.target.category.value;
     const newAddedBook = {
       photo,
@@ -172,7 +171,7 @@ const AddBook = () => {
                     </div>
                   </div>
                   <div className="form-control">
-                    <label htmlFor="category" className="label">
+                    <label className="label">
                       <span className="label-text text-base font-semibold">
                         Category
                       </span>
@@ -182,11 +181,11 @@ const AddBook = () => {
                       id="category"
                       className="input input-bordered text-sm bg-gray-50  border border-[#0c3989]"
                     >
-                      <option value="volvo">Novel</option>
-                      <option value="saab">Thriller</option>
-                      <option value="mercedes">History</option>
-                      <option value="audi">Drama</option>
-                      <option value="audi">Sci-fi</option>
+                      <option value="Novel">Novel</option>
+                      <option value="Thriller">Thriller</option>
+                      <option value="History">History</option>
+                      <option value="Drama">Drama</option>
+                      <option value="Sci-fi">Sci-fi</option>
                     </select>
                   </div>
 

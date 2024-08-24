@@ -14,18 +14,18 @@ const BookCetagories = () => {
                   <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                       <h2 className="text-xl text-[#0c3989] dark:text-white text-center font-bold tracking-wide">
-                        Book Inventory
+                        Novel
                       </h2>
                       <p className="text-[#0c3989] text-center dark:text-white">
-                        Curabitur luctus erat nunc, sed ullamcorper erat
-                        vestibulum eget.
+                        The Novel category in books is one of the most diverse
+                        and popular genres in literature.
                       </p>
                     </div>
                     <button
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
-                      Learn more
+                      See more
                     </button>
                   </div>
                 </div>
@@ -41,18 +41,18 @@ const BookCetagories = () => {
                   <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                       <h2 className="text-xl text-[#0c3989] dark:text-white text-center font-bold tracking-wide">
-                        Member Management
+                        Thriller
                       </h2>
                       <p className="text-[#0c3989] text-center dark:text-white">
-                        Curabitur luctus erat nunc, sed ullamcorper erat
-                        vestibulum eget.
+                        Thriller novels often revolve around crime and they may
+                        include elements of mystery and horror.
                       </p>
                     </div>
                     <button
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
-                      Learn more
+                      See more
                     </button>
                   </div>
                 </div>
@@ -68,18 +68,18 @@ const BookCetagories = () => {
                   <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                       <h2 className="text-xl text-[#0c3989] dark:text-white text-center font-bold tracking-wide">
-                        Loan and Return Tracking
+                        History
                       </h2>
                       <p className="text-[#0c3989] text-center dark:text-white">
-                        Curabitur luctus erat nunc, sed ullamcorper erat
-                        vestibulum eget.
+                        Nonfiction historical books often delve into specific
+                        time periods and the lives of influential leaders,
                       </p>
                     </div>
                     <button
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
-                      Learn more
+                      See more
                     </button>
                   </div>
                 </div>
@@ -95,18 +95,18 @@ const BookCetagories = () => {
                   <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
                       <h2 className="text-xl text-[#0c3989] dark:text-white text-center font-bold tracking-wide">
-                        Reservations
+                        Drama
                       </h2>
                       <p className="text-[#0c3989] text-center dark:text-white">
-                        Curabitur luctus erat nunc, sed ullamcorper erat
-                        vestibulum eget.
+                        The Drama category in books is centered around stories
+                        that emotionally intense experiences.
                       </p>
                     </div>
                     <button
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
-                      Learn more
+                      See more
                     </button>
                   </div>
                 </div>
