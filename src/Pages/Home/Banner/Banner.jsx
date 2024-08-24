@@ -1,14 +1,16 @@
 const Banner = () => {
     return (
       <div className="bg-white dark:bg-black">
-        <div className="hero min-h-screen">
+        <div className="hero md:min-h-screen py-12 md:py-0">
           <div className="hero-content flex-col gap-5 lg:flex-row-reverse">
             <img
               src="https://i.ibb.co/Lgmwm3H/3d-minimal-opened-book-flying-with-another-books-back-to-school-concept-3d-illustration-free-png-ezg.png"
-              className="max-w-lg rounded-lg shadow-2xl"
+              className="max-w-xs md:max-w-lg rounded-lg shadow-2xl"
             />
-            <div className=" text-left text-black dark:text-[#a6adbb] ">
-              <h1 className="text-5xl font-bold">Library Management System</h1>
+            <div className=" text-center md:text-left text-black dark:text-[#a6adbb] ">
+              <h1 className="text-2xl md:text-5xl font-bold pt-3">
+                Library Management System
+              </h1>
               <p className="py-8">
                 A Library Management System (LMS) is a software application
                 designed to manage the operations of a library. It helps

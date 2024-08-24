@@ -3,8 +3,8 @@ const BookCetagories = () => {
       <div>
         <section>
           <div className="container px-6 m-auto pb-24">
-            <div className="grid grid-cols-4 gap-3 md:grid-cols-8 lg:grid-cols-12">
-              <div className="col-span-4 lg:col-span-3">
+            <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12  gap-3">
+              <div className="col-span-4 lg:col-span-3  text-center mx-auto">
                 <div className="max-w-xs rounded-md shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
                   <img
                     src="https://i.ibb.co/L5DMBWg/book-1769228-640.jpg"
@@ -30,7 +30,7 @@ const BookCetagories = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 lg:col-span-3">
+              <div className="col-span-4 lg:col-span-3  text-center mx-auto">
                 {" "}
                 <div className="max-w-xs rounded-md shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
                   <img
@@ -57,7 +57,7 @@ const BookCetagories = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 lg:col-span-3">
+              <div className="col-span-4 lg:col-span-3  text-center mx-auto">
                 {" "}
                 <div className="max-w-xs rounded-md shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
                   <img
@@ -84,7 +84,7 @@ const BookCetagories = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-4 lg:col-span-3">
+              <div className="col-span-4 lg:col-span-3  text-center mx-auto">
                 {" "}
                 <div className="max-w-xs rounded-md shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
                   <img
