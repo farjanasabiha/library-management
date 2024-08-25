@@ -1,3 +1,7 @@
+
+import { Link } from "react-router-dom";
+
+
 const BookCetagories = () => {
     return (
       <div>
@@ -21,12 +25,13 @@ const BookCetagories = () => {
                         and popular genres in literature.
                       </p>
                     </div>
-                    <button
+                    <Link
+                      to="/NovelCategory"
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
                       See more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -48,12 +53,13 @@ const BookCetagories = () => {
                         include elements of mystery and horror.
                       </p>
                     </div>
-                    <button
+                    <Link
+                      to="/ThrillerCategory"
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
                       See more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -75,12 +81,13 @@ const BookCetagories = () => {
                         time periods and the lives of influential leaders,
                       </p>
                     </div>
-                    <button
+                    <Link
+                      to="/HistoryCategory"
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
                       See more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -102,12 +109,14 @@ const BookCetagories = () => {
                         that emotionally intense experiences.
                       </p>
                     </div>
-                    <button
+
+                    <Link
+                      to="/DramaCategory"
                       type="button"
                       className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#0c3989] text-white "
                     >
                       See more
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

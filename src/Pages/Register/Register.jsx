@@ -5,6 +5,8 @@ import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
 const Register = () => {
+  document.title = "Library Management - Register";
+
   const { createUser } = useContext(AuthContext);
   const [swalProps, setSwalProps] = useState({});
   const [registerError, setRegisterError] = useState("");

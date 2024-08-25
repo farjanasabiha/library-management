@@ -13,6 +13,11 @@ import BorrowedBooks from "./Pages/BorrowedBooks/BorrowedBooks";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import PrivateRouter from "./PrivateRouter/PrivateRouter";
 import UpdatePage from "./Pages/UpdatePage/UpdatePage";
+import NovelCategory from "./Components/NovelCategory/NovelCategory";
+import ThrillerCategory from "./Components/ThrillerCategory/ThrillerCategory";
+import HistoryCategory from "./Components/HistoryCategory/HistoryCategory";
+import DramaCategory from "./Components/DramaCategory/DramaCategory";
+import DetailsPage from "./Components/DetailsPage/DetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +46,42 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/NovelCategory",
+        element: (
+          <PrivateRouter>
+            <NovelCategory></NovelCategory>
+          </PrivateRouter>
+        ),
+        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
+        path: "/ThrillerCategory",
+        element: (
+          <PrivateRouter>
+            <ThrillerCategory></ThrillerCategory>
+          </PrivateRouter>
+        ),
+        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
+        path: "/HistoryCategory",
+        element: (
+          <PrivateRouter>
+            <HistoryCategory></HistoryCategory>
+          </PrivateRouter>
+        ),
+        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
+        path: "/DramaCategory",
+        element: (
+          <PrivateRouter>
+            <DramaCategory></DramaCategory>
+          </PrivateRouter>
+        ),
+        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
         path: "/AllBooks",
         element: (
           <PrivateRouter>
@@ -58,10 +99,14 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "updatePage/:id",
+        path: "/update/:id",
         element: <UpdatePage></UpdatePage>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
+        path: "/detailsPage/:id",
+        element: <DetailsPage></DetailsPage>,
+        loader: () => fetch("http://localhost:5000/books"),
       },
     ],
   },

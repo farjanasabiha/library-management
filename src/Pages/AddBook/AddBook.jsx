@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { Rating } from "@smastrom/react-rating";
-
 import "@smastrom/react-rating/style.css";
+
+
 const AddBook = () => {
+  document.title = "Library Management - AddBook";
+  
   const [rating, setRating] = useState(0);
   const handleAddBook = (e) => {
     e.preventDefault();

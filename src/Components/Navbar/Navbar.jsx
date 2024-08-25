@@ -163,7 +163,7 @@ const Navbar = () => {
               </ul>
             </div> */}
             <p className="text-sm md:text-2xl ml-2 font-bold text-black dark:text-white">
-              Art And Craft
+              Library Management
             </p>
           </div>
           <div className="navbar-center hidden lg:flex">

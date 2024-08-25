@@ -11,7 +11,9 @@ const AllBooksCard = ({ allAddedBook }) => {
     quantity_of_books,
     rating,
     category,
-    } = allAddedBook;
+  } = allAddedBook;
+  
+  console.log(_id)
     
   return (
     <div>
@@ -19,7 +21,7 @@ const AllBooksCard = ({ allAddedBook }) => {
         <div className="container px-6 m-auto ">
           <div className="shadow-lg my-10 rounded-md dark:border-2 dark:border-gray-500">
             <img
-              className="w-full h-full rounded-md"
+              className="rounded-md  w-full h-[400px]"
               src={photo}
               alt="Photo"
             ></img>
@@ -57,7 +59,7 @@ const AllBooksCard = ({ allAddedBook }) => {
               </div>
               <div className="flex mt-3  flex-wrap font-bold justify-between gap-5  space-x-2 text-xs ">
                 <Link
-                  to={`/updatePage/${_id}`}
+                  to={`/update/${_id}`}
                   className="text-[#4885f8] border border-[#4885f8] rounded-md px-6 py-2 text-base"
                 >
                   Update

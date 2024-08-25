@@ -1,8 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdatePage = () => {
   const updatePage = useLoaderData();
+  // console.log(updatePage)
+  const { id } = useParams();
+  const selectedPage = updatePage.find((blog) => blog._id === id);
+  console.log(selectedPage);
 
   const {
     _id,
@@ -13,8 +17,8 @@ const UpdatePage = () => {
     quantity_of_books,
     short_description,
     rating,
-  } = updatePage;
-
+  } = selectedPage;
+    console.log(_id);
   const handleUpdateItem = (e) => {
     e.preventDefault();
     const photo = e.target.photo.value;
@@ -25,7 +29,7 @@ const UpdatePage = () => {
     const rating = e.target.rating.value;
     const name = e.target.name.value;
     const newList = {
-      _id,
+      
       photo,
       category,
       short_description,
@@ -34,10 +38,10 @@ const UpdatePage = () => {
       author_name,
       name,
     };
-    console.log(newList);
+
 
     // send Data to the server
-    fetch(`http://localhost:5000/books/${_id}`, {
+    fetch(`http://localhost:5000/bookss/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -113,7 +117,7 @@ const UpdatePage = () => {
                     name="author_name"
                     placeholder="Author name"
                     className="input input-bordered text-sm text-white"
-                    required
+                    readOnly
                   />
                 </div>
                 <div className="form-control">
@@ -128,7 +132,7 @@ const UpdatePage = () => {
                     name="category"
                     placeholder="ategory"
                     className="input input-bordered text-sm  text-white"
-                    required
+                    readOnly
                   />
                 </div>
                 <div className="form-control">

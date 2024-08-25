@@ -3,7 +3,7 @@ import AllBooksCard from '../../Components/AllBooksCard/AllBooksCard';
 
 
 const AllBooks = () => {
-
+  document.title = "Library Management - AllBooks";
     const allAddedBooks = useLoaderData();
     return (
       <div>
