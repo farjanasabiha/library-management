@@ -1,12 +1,10 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdatePage = () => {
-  const updatePage = useLoaderData();
-  // console.log(updatePage)
+  const [book, setBook] = useState([]);
   const { id } = useParams();
-  const selectedPage = updatePage.find((blog) => blog._id === id);
-  console.log(selectedPage);
 
   const {
     _id,
@@ -17,8 +15,8 @@ const UpdatePage = () => {
     quantity_of_books,
     short_description,
     rating,
-  } = selectedPage;
-    console.log(_id);
+  } = book;
+    console.log(id);
   const handleUpdateItem = (e) => {
     e.preventDefault();
     const photo = e.target.photo.value;
@@ -41,7 +39,7 @@ const UpdatePage = () => {
 
 
     // send Data to the server
-    fetch(`http://localhost:5000/bookss/${id}`, {
+    fetch(`http://localhost:5000/updateBooks/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -61,6 +59,11 @@ const UpdatePage = () => {
         }
       });
   };
+      useEffect(() => {
+        fetch(`http://localhost:5000/bookDetails/${id}`)
+          .then((res) => res.json())
+          .then((data) => setBook(data));
+      }, []);
   return (
     <div className="bg-white dark:bg-black">
       <div className="container py-14 mx-auto space-y-8">

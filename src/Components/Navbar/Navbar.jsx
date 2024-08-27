@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../../App.css";
 import { IoIosMoon } from "react-icons/io";
 import { AuthContext } from "../../provider/AuthProvider";
-
+import { Tooltip } from "react-tooltip";
 const Navbar = () => {
   const themes = {
     dark: "light",
@@ -194,12 +194,18 @@ const Navbar = () => {
             {user ? (
               <div className="flex items-center justify-center gap-3">
                 <div className="navContainer">
-                  <img
-                    className="image w-14 h-14 cursor-pointer"
-                    src={user.photoURL}
-                    alt="User Profile"
-                  />
-                  <div className="overlay">{user.displayName}</div>
+                  <a id="clickable" className="">
+                    <img
+                      className="w-12 h-12 cursor-pointer rounded-full"
+                      src={user.photoURL}
+                      alt="User Profile"
+                    />
+                  </a>
+                  <Tooltip anchorSelect="#clickable" clickable>
+                    <button>
+                      <div className="overlay">{user.displayName}</div>{" "}
+                    </button>
+                  </Tooltip>
                 </div>
                 <button
                   onClick={handleSignOut}

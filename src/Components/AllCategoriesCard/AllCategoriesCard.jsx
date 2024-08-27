@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AllBooksCard = ({ allAddedBook }) => {
+const AllCategoriesCard = ({ allCategoriesdBooks }) => {
   const {
     _id,
     photo,
@@ -11,10 +11,9 @@ const AllBooksCard = ({ allAddedBook }) => {
     quantity_of_books,
     rating,
     category,
-  } = allAddedBook;
-  
-  console.log(_id)
-    
+  } = allCategoriesdBooks;
+
+  console.log(_id);
   return (
     <div>
       <section>
@@ -32,9 +31,17 @@ const AllBooksCard = ({ allAddedBook }) => {
                   {category}
                 </span>
               </p>
-              <p className="font-bold text-black dark:text-gray-200 mt-3">
+              <p className=" mt-2 text-black dark:text-gray-200  text-sm font-medium leading-snug">
+                <span className="font-semibold">Book Name :</span> {name}
+              </p>
+              <p className="mt-2 text-black dar
+              k:text-gray-200 text-sm font-medium leading-snug">
+                <span className="font-semibold">Author Name :</span>{" "}
+                {author_name}
+              </p>
+              <p className=" text-black dark:text-gray-200 mt-2">
                 Short Description :{" "}
-                <span className="font-medium text-black dark:text-gray-200 rounded-xl  capitalize">
+                <span className=" text-black dark:text-gray-200 rounded-xl  capitalize">
                   {short_description}
                 </span>
               </p>
@@ -48,21 +55,12 @@ const AllBooksCard = ({ allAddedBook }) => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap font-bold justify-start gap-5  space-x-2 text-xs text-black">
-                <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-                  <span className="font-semibold">Book Name :</span> {name}
-                </p>
-                <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-                  <span className="font-semibold">Author Name :</span>{" "}
-                  {author_name}
-                </p>
-              </div>
               <div className="flex mt-3  flex-wrap font-bold justify-between gap-5  space-x-2 text-xs ">
                 <Link
-                  to={`/updatePage/${_id}`}
+                  to={`/detailsPage/${_id}`}
                   className="text-white bg-[#0c3989]  hover:bg-blue-800 w-full  font-medium rounded-lg text-sm px-7 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 "
                 >
-                  Update
+                  Details
                 </Link>
               </div>
             </div>
@@ -73,4 +71,4 @@ const AllBooksCard = ({ allAddedBook }) => {
   );
 };
 
-export default AllBooksCard;
+export default AllCategoriesCard;

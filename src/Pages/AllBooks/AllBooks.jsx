@@ -1,10 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import AllBooksCard from '../../Components/AllBooksCard/AllBooksCard';
 
-
 const AllBooks = () => {
+    const [allBook, setAllBook] = useState([]);
   document.title = "Library Management - AllBooks";
-    const allAddedBooks = useLoaderData();
+    useEffect(() => {
+      fetch(`http://localhost:5000/allBooks`)
+        .then((res) => res.json())
+        .then((data) => setAllBook(data));
+    }, []);
+  console.log(allBook)
     return (
       <div>
         <div className="bg-white dark:bg-black">
@@ -16,7 +21,7 @@ const AllBooks = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-              {allAddedBooks.map((allAddedBook) => (
+              {allBook.map((allAddedBook) => (
                 <AllBooksCard
                   allAddedBook={allAddedBook}
                   key={allAddedBook._id}

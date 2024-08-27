@@ -18,6 +18,8 @@ import ThrillerCategory from "./Components/ThrillerCategory/ThrillerCategory";
 import HistoryCategory from "./Components/HistoryCategory/HistoryCategory";
 import DramaCategory from "./Components/DramaCategory/DramaCategory";
 import DetailsPage from "./Components/DetailsPage/DetailsPage";
+import BookCetagories from "./Pages/Home/BookCetagories/BookCetagories";
+import CategoryData from "./Components/CategoryData/CategoryData";
 
 const router = createBrowserRouter([
   {
@@ -88,7 +90,6 @@ const router = createBrowserRouter([
             <AllBooks></AllBooks>
           </PrivateRouter>
         ),
-        loader: () => fetch("http://localhost:5000/books"),
       },
       {
         path: "/BorrowedBooks",
@@ -99,14 +100,16 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/update/:id",
+        path: "/updatePage/:id",
         element: <UpdatePage></UpdatePage>,
-        loader: () => fetch("http://localhost:5000/books"),
       },
       {
         path: "/detailsPage/:id",
         element: <DetailsPage></DetailsPage>,
-        loader: () => fetch("http://localhost:5000/books"),
+      },
+      {
+        path: "/categoryData/:categoryName",
+        element: <CategoryData></CategoryData>,
       },
     ],
   },
