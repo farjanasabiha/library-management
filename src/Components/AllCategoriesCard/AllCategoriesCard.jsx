@@ -26,7 +26,7 @@ const AllCategoriesCard = ({ allCategoriesdBooks }) => {
             ></img>
             <div className="p-7 ">
               <p className=" font-medium leading-snug text-black dark:text-gray-200">
-                <span className="font-semibold">Category :</span>{" "}
+                <span className="font-semibold">Category :</span>
                 <span className="underline text-base font-medium   rounded-xl  capitalize">
                   {category}
                 </span>
@@ -34,13 +34,12 @@ const AllCategoriesCard = ({ allCategoriesdBooks }) => {
               <p className=" mt-2 text-black dark:text-gray-200  text-sm font-medium leading-snug">
                 <span className="font-semibold">Book Name :</span> {name}
               </p>
-              <p className="mt-2 text-black dar
-              k:text-gray-200 text-sm font-medium leading-snug">
-                <span className="font-semibold">Author Name :</span>{" "}
+              <p className="mt-2 text-black dark:text-gray-200 text-sm font-medium leading-snug">
+                <span className="font-semibold">Author Name :</span>
                 {author_name}
               </p>
               <p className=" text-black dark:text-gray-200 mt-2">
-                Short Description :{" "}
+                Short Description :
                 <span className=" text-black dark:text-gray-200 rounded-xl  capitalize">
                   {short_description}
                 </span>
