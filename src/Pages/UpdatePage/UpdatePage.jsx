@@ -175,12 +175,13 @@ const UpdatePage = () => {
                     </span>
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     name="quantity_of_books"
                     defaultValue={quantity_of_books}
                     placeholder="Quantity of books"
                     className="input input-bordered text-sm  text-white capitalize"
                     required
+                    min={0}
                   />
                 </div>
                 <div className="form-control mt-6">
