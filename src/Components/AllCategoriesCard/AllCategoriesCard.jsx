@@ -16,7 +16,7 @@ const AllCategoriesCard = ({ allCategoriesdBooks }) => {
   console.log(_id);
   return (
     <div>
-      <section>
+      <section className="">
         <div className="container px-6 m-auto ">
           <div className="shadow-lg my-10 rounded-md dark:border-2 dark:border-gray-500">
             <img

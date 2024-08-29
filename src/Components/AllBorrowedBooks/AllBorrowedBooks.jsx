@@ -6,11 +6,8 @@ const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
     photo,
     category,
     name,
-    author_name,
-    quantity_of_books,
     returnDate,
     borrowedDate,
-    borrowedEmail,
     previousBookId,
   } = borrowBook;
   const handleReturn = async () => {
@@ -37,55 +34,31 @@ const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
           src={photo}
           alt="Photo"
         ></img>
-        <div className="p-7 ">
-          <p className=" font-medium leading-snug text-black dark:text-gray-200">
+        <div className="p-7 space-y-2">
+          <p className=" font-medium text-black dark:text-gray-200">
             <span className="font-semibold">Category :</span>{" "}
             <span className="underline text-base font-medium   rounded-xl  capitalize">
               {category}
             </span>
           </p>
-          <p className=" font-medium leading-snug text-black dark:text-gray-200">
-            <span className="font-semibold">name :</span>{" "}
-            <span className="underline text-base font-medium   rounded-xl  capitalize">
+          <p className=" font-medium text-black dark:text-gray-200">
+            <span className="font-semibold">Name :</span>{" "}
+            <span className=" text-base font-medium   rounded-xl  capitalize">
               {name}
             </span>
           </p>
-          <p className=" font-medium leading-snug text-black dark:text-gray-200">
-            <span className="font-semibold">author name :</span>{" "}
-            <span className="underline text-base font-medium   rounded-xl  capitalize">
-              {author_name}
+          <p className=" font-medium text-black dark:text-gray-200">
+            <span className="font-semibold">Return Date :</span>{" "}
+            <span className=" text-base font-medium   rounded-xl  capitalize">
+              {returnDate}
             </span>
           </p>
-
-          <div className="flex  flex-wrap font-bold justify-start gap-5  space-x-2 text-xs text-black">
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">Quantity Of Books :</span>{" "}
-              {quantity_of_books}
-            </p>
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">returnDate :</span> {returnDate}
-            </p>
-          </div>
-          <div className="flex  flex-wrap font-bold justify-start gap-5  space-x-2 text-xs text-black">
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">borrowedEmail :</span>{" "}
-              {borrowedEmail}
-            </p>
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">borrowedDate :</span>{" "}
+          <p className=" font-medium text-black dark:text-gray-200">
+            <span className="font-semibold">Borrowed Date :</span>{" "}
+            <span className=" text-base font-medium   rounded-xl  capitalize">
               {borrowedDate}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap font-bold justify-start gap-5  space-x-2 text-xs text-black">
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">Name :</span> {name}
-            </p>
-            <p className=" text-black dark:text-gray-200 py-2 text-sm font-medium leading-snug">
-              <span className="font-semibold">Author Name :</span>{" "}
-              {borrowedEmail}
-            </p>
-          </div>
+            </span>
+          </p>
           <div className="flex mt-3  flex-wrap font-bold justify-between gap-5  space-x-2 text-xs ">
             <button
               onClick={handleReturn}

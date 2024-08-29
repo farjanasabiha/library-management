@@ -5,7 +5,7 @@ const SingleBookCategory = ({ bookCategory }) => {
 
   return (
     <div className="col-span-4 lg:col-span-3 text-center mx-auto">
-      <div className="max-w-xs rounded-md shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
+      <div className="max-w-xs rounded-md dark:border-2 dark:border-gray-500 shadow-md bg-white dark:bg-black text-black dark:text-gray-100">
         <img
           src={image_url}
           alt={category_name}

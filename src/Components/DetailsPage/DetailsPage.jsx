@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { RxCross2 } from "react-icons/rx";
-
+import Swal from "sweetalert2";
 const DetailsPage = () => {
   const [details, setDetails] = useState([]);
   const { user } = useContext(AuthContext);
@@ -41,9 +41,9 @@ const DetailsPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-white dark:bg-black">
       <div className="flex min-h-screen items-center justify-center px-7  py-12 md:py-0">
-        <div className="relative flex-col md:flex w-full max-w-[48rem] md:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+        <div className="relative  border border-gray-300 flex-col md:flex w-full max-w-[48rem] md:flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="relative m-0 md:w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
             <img
               src={photo}
@@ -93,8 +93,7 @@ const DetailsPage = () => {
               </button>
             </form>
           </div>
-          <h3 className="font-bold text-lg">Hi!</h3>
-          <p className="py-4">closeeeeeeeeeee</p>
+          <h3 className="font-bold text-lg text-center mb-3">Borrow Your Books!</h3>
           <form onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">

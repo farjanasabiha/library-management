@@ -18,14 +18,16 @@ const CategoryData = () => {
     
     console.log(allBookCategories, "Hello World")
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-20  px-5">
-        {allBookCategories.map((allCategoriesdBooks) => (
-          <AllCategoriesCard
-            allCategoriesdBooks={allCategoriesdBooks}
-            key={allCategoriesdBooks._id}
-          ></AllCategoriesCard>
-        ))}
+    <div className="bg-white dark:bg-black">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-20  px-5">
+          {allBookCategories.map((allCategoriesdBooks) => (
+            <AllCategoriesCard
+              allCategoriesdBooks={allCategoriesdBooks}
+              key={allCategoriesdBooks._id}
+            ></AllCategoriesCard>
+          ))}
+        </div>
       </div>
     </div>
   );

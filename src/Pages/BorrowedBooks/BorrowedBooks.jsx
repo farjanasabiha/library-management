@@ -17,7 +17,7 @@ console.log(borrowBooks)
   return (
     <div className="bg-white dark:bg-black">
       <div className="container py-14 mx-auto space-y-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-20  px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-20  px-5">
           {borrowBooks.map((borrowBook) => (
             <AllBorrowedBooks
               borrowBooks={borrowBooks}

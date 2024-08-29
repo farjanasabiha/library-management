@@ -65,9 +65,9 @@ const AddBook = () => {
   return (
     <div>
       <div className=" h-full bg-white dark:bg-black">
-        <div className="container p-6 mx-auto space-y-8">
-          <h1 className="text-3xl text-[#0c3989] dark:text-white font-semibold text-center">
-            Add Your Art And Craft Item
+        <div className="container p-6 mx-auto py-14 space-y-8">
+          <h1 className="text-3xl text-[#0c3989] dark:text-white font-bold text-center">
+            Add Your Books
           </h1>
 
           <div className="dark:border-[1px] dark:border-gray-200 rounded-xl">
@@ -141,6 +141,7 @@ const AddBook = () => {
                       name="quantity_of_books"
                       placeholder="Quantity of books"
                       className="input input-bordered text-sm bg-gray-50  border border-[#0c3989]"
+                      min="0"
                     />
                   </div>
                   <div className="form-control">
