@@ -16,7 +16,7 @@ const UpdatePage = () => {
     short_description,
     rating,
   } = book;
-    console.log(id);
+    // console.log(id);
   const handleUpdateItem = (e) => {
     e.preventDefault();
     const photo = e.target.photo.value;

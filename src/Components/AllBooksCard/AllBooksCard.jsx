@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AllBooksCard = ({ allAddedBook }) => {
+const AllBooksCard = ({ allAddedBook,availableBooks, setAvailableBooks }) => {
   const {
     _id,
     photo,
@@ -12,9 +12,9 @@ const AllBooksCard = ({ allAddedBook }) => {
     rating,
     category,
   } = allAddedBook;
-  
-  console.log(_id)
-    
+
+  // console.log(_id)
+
   return (
     <div>
       <section>
