@@ -11,12 +11,14 @@ const CategoryData = () => {
   console.log(categoryName, "This in category name");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/getCategoryBooks/${categoryName}`)
+    fetch(
+      `https://library-management-server-ebon.vercel.app/getCategoryBooks/${categoryName}`
+    )
       .then((res) => res.json())
       .then((data) => setallBookCategories(data));
   }, []);
-    
-    console.log(allBookCategories, "Hello World")
+
+  console.log(allBookCategories, "Hello World");
   return (
     <div className="bg-white dark:bg-black">
       <div className="container mx-auto">

@@ -54,7 +54,8 @@ const router = createBrowserRouter([
             <NovelCategory></NovelCategory>
           </PrivateRouter>
         ),
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () =>
+          fetch("https://library-management-server-ebon.vercel.app/books"),
       },
       {
         path: "/ThrillerCategory",
@@ -63,7 +64,8 @@ const router = createBrowserRouter([
             <ThrillerCategory></ThrillerCategory>
           </PrivateRouter>
         ),
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () =>
+          fetch("https://library-management-server-ebon.vercel.app/books"),
       },
       {
         path: "/HistoryCategory",
@@ -72,7 +74,8 @@ const router = createBrowserRouter([
             <HistoryCategory></HistoryCategory>
           </PrivateRouter>
         ),
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () =>
+          fetch("https://library-management-server-ebon.vercel.app/books"),
       },
       {
         path: "/DramaCategory",
@@ -81,7 +84,8 @@ const router = createBrowserRouter([
             <DramaCategory></DramaCategory>
           </PrivateRouter>
         ),
-        loader: () => fetch("http://localhost:5000/books"),
+        loader: () =>
+          fetch("https://library-management-server-ebon.vercel.app/books"),
       },
       {
         path: "/AllBooks",

@@ -16,7 +16,7 @@ const UpdatePage = () => {
     short_description,
     rating,
   } = book;
-    // console.log(id);
+  // console.log(id);
   const handleUpdateItem = (e) => {
     e.preventDefault();
     const photo = e.target.photo.value;
@@ -27,7 +27,6 @@ const UpdatePage = () => {
     const rating = e.target.rating.value;
     const name = e.target.name.value;
     const newList = {
-      
       photo,
       category,
       short_description,
@@ -37,15 +36,17 @@ const UpdatePage = () => {
       name,
     };
 
-
     // send Data to the server
-    fetch(`http://localhost:5000/updateBooks/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newList),
-    })
+    fetch(
+      `https://library-management-server-ebon.vercel.app/updateBooks/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newList),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -59,11 +60,11 @@ const UpdatePage = () => {
         }
       });
   };
-      useEffect(() => {
-        fetch(`http://localhost:5000/bookDetails/${id}`)
-          .then((res) => res.json())
-          .then((data) => setBook(data));
-      }, []);
+  useEffect(() => {
+    fetch(`https://library-management-server-ebon.vercel.app/bookDetails/${id}`)
+      .then((res) => res.json())
+      .then((data) => setBook(data));
+  }, []);
   return (
     <div className="bg-white dark:bg-black">
       <div className="container py-14 mx-auto space-y-8">

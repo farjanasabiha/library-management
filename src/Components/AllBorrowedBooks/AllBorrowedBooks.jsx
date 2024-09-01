@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
+const AllBorrowedBooks = ({ borrowBook, borrowBooks, setBorrowBooks }) => {
   const {
     _id,
     photo,
@@ -12,7 +12,7 @@ const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
   } = borrowBook;
   const handleReturn = async () => {
     await fetch(
-      `http://localhost:5000/returnBooks/${_id}/?previousBookId=${previousBookId}`,
+      `https://library-management-server-ebon.vercel.app/returnBooks/${_id}/?previousBookId=${previousBookId}`,
       {
         method: "DELETE",
         headers: {
@@ -23,7 +23,7 @@ const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
       // setBorrowBooks([])
       // console.log(res)
       // setBorrowBooks(borrowBooks);
-      window.location.reload()
+      window.location.reload();
     });
   };
   return (
@@ -74,10 +74,3 @@ const AllBorrowedBooks = ({ borrowBook,borrowBooks, setBorrowBooks }) => {
 };
 
 export default AllBorrowedBooks;
-
-
-
-
-
-
-

@@ -25,17 +25,20 @@ const DetailsPage = () => {
       borrowedEmail: user.email,
     };
     console.log(details);
-    const result = await fetch(`http://localhost:5000/bookDetails/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify( borrowBooksData ),
-    });
+    const result = await fetch(
+      `https://library-management-server-ebon.vercel.app/bookDetails/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(borrowBooksData),
+      }
+    );
     console.log(result);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/bookDetails/${id}`)
+    fetch(`https://library-management-server-ebon.vercel.app/bookDetails/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -93,7 +96,9 @@ const DetailsPage = () => {
               </button>
             </form>
           </div>
-          <h3 className="font-bold text-lg text-center mb-3">Borrow Your Books!</h3>
+          <h3 className="font-bold text-lg text-center mb-3">
+            Borrow Your Books!
+          </h3>
           <form onSubmit={handleSubmit}>
             <div className="form-control">
               <label className="label">

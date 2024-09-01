@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -61,17 +62,28 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       if (currentUser) {
         axios
-          .post("http://localhost:5000/jwt", loggedUser, {
-            withCredential: true,
-          })
+          .post(
+            "https://library-management-server-ebon.vercel.app/jwt",
+            loggedUser,
+            {
+              withCredential: true,
+            }
+          )
           .then((res) => {
+            // document.cookie(res.data.token)
+            // cookies.set();
+            Cookies.set("tooken", res.data.token);
             console.log("token Response", res.data);
           });
       } else {
         axios
-          .post("http://localhost:5000/logout", loggedUser, {
-            withCredential: true,
-          })
+          .post(
+            "https://library-management-server-ebon.vercel.app/logout",
+            loggedUser,
+            {
+              withCredential: true,
+            }
+          )
           .then((res) => console.log(res.data));
       }
     });

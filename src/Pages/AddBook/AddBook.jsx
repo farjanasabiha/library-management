@@ -5,7 +5,7 @@ import "@smastrom/react-rating/style.css";
 
 const AddBook = () => {
   document.title = "Library Management - AddBook";
-  
+
   const [rating, setRating] = useState(0);
   const handleAddBook = (e) => {
     e.preventDefault();
@@ -27,13 +27,17 @@ const AddBook = () => {
     console.log(newAddedBook);
 
     // send Data to the server
-    fetch("http://localhost:5000/books", {credentials: 'include'}, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newAddedBook),
-    })
+    fetch(
+      "https://library-management-server-ebon.vercel.app/books",
+      // { credentials: "include" },
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newAddedBook),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

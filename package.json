@@ -12,7 +12,8 @@
   "dependencies": {
     "@smastrom/react-rating": "^1.5.0",
     "axios": "^1.7.5",
-    "firebase": "^10.13.0",
+    "firebase": "^10.13.1",
+    "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

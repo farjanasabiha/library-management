@@ -4,10 +4,10 @@ import SingleBookCategory from "../../../Components/SingleBookCategory/SingleBoo
 const BookCategories = () => {
   const [bookCategories, setbookCategories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/bookCategories")
+    fetch("https://library-management-server-ebon.vercel.app/bookCategories")
       .then((res) => res.json())
       .then((data) => setbookCategories(data));
-  },[])
+  }, []);
   // Log the data to ensure it's being fetched
   // console.log(bookCategories);
 
