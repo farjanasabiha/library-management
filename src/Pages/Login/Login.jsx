@@ -60,8 +60,8 @@ const Login = () => {
 
   return (
     <div className="bg-white dark:bg-black">
-      <div className="container mx-auto">
-        <div className="flex items-center justify-center flex-col py-10 md:py-32">
+      <div className="container mx-auto h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center flex-col md:py-32">
           <h1 className="text-xl md:text-4xl font-semibold text-[#4b85f0] mb-8">
             Please Login Here!
           </h1>

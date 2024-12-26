@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import ShowDrama from './ShowDrama';
+import ShowDrama from "./ShowDrama";
 
 const DramaCategory = () => {
   const updatePage = useLoaderData();

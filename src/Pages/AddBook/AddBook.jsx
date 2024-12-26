@@ -5,7 +5,6 @@ import "@smastrom/react-rating/style.css";
 
 const AddBook = () => {
   document.title = "Library Management - AddBook";
-
   const [rating, setRating] = useState(0);
   const handleAddBook = (e) => {
     e.preventDefault();

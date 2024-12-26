@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import "../../App.css";
 import { IoIosMoon } from "react-icons/io";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Tooltip } from "react-tooltip";
+import SingleNav from "../SingleNav/SingleNav";
 const Navbar = () => {
   const themes = {
     dark: "light",
@@ -36,68 +36,10 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className="bg-white rounded-lg hover:bg-transparent focus:bg-transparent ml-5">
-        <NavLink
-          className="dark:text-white"
-          to="/"
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "semibold" : "bold",
-              color: isActive ? "white" : "black",
-              background: isActive ? "black" : "transparent",
-              textDecoration: isActive ? "" : "underline",
-            };
-          }}
-        >
-          Home
-        </NavLink>
-      </li>
-      <li className="bg-white  rounded-lg bg-transparent hover:bg-transparent focus:bg-transparent  ml-5">
-        <NavLink
-          to="/AddBook"
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "semibold" : "bold",
-              color: isActive ? "white" : "black",
-              background: isActive ? "black" : "transparent",
-              textDecoration: isActive ? "" : "underline",
-            };
-          }}
-        >
-          Add Book
-        </NavLink>
-      </li>
-      <li className="bg-white rounded-lg hover:bg-transparent focus:bg-transparent ml-5">
-        <NavLink
-          to="/AllBooks"
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "semibold" : "bold",
-              color: isActive ? "white" : "black",
-              background: isActive ? "black" : "transparent",
-              textDecoration: isActive ? "" : "underline",
-            };
-          }}
-        >
-          All Books
-        </NavLink>
-      </li>
-
-      <li className="bg-white  rounded-lg bg-transparent hover:bg-transparent focus:bg-transparent  ml-5">
-        <NavLink
-          to="/BorrowedBooks"
-          style={({ isActive }) => {
-            return {
-              fontWeight: isActive ? "semibold" : "bold",
-              color: isActive ? "white" : "black",
-              background: isActive ? "black" : "transparent",
-              textDecoration: isActive ? "" : "underline",
-            };
-          }}
-        >
-          Borrowed Books
-        </NavLink>
-      </li>
+      <SingleNav link="/" navName="Home" />
+      <SingleNav link="/AddBook" navName="Add Book" />
+      <SingleNav link="/AllBooks" navName="All Books" />
+      <SingleNav link="/BorrowedBooks" navName="Borrowed Books" />
     </>
   );
 
@@ -134,34 +76,6 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            {/* <div className="dropdown">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[40] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                {links}
-              </ul>
-            </div> */}
             <p className="text-sm md:text-2xl ml-2 font-bold text-black dark:text-white">
               Library Management
             </p>

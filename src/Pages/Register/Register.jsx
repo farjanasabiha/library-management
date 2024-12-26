@@ -66,7 +66,7 @@ const Register = () => {
   };
   return (
     <div className="bg-white dark:bg-black dark:text-white">
-      <div className="container mx-auto">
+      <div className="container mx-auto h-screen flex items-center justify-center">
         <form
           onSubmit={handleRegister}
           className="flex items-center justify-center flex-col py-32"

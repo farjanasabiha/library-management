@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const AllSingleBooks = ({ allBookCategorie }) => {
-    const {_id, photo, bookName, category, authorName } = allBookCategorie;
+  const { _id, photo, bookName, category, authorName } = allBookCategorie;
   const [rating, setRating] = useState(0);
 
   // Handle rating change

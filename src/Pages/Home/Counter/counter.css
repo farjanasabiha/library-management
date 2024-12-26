@@ -1,0 +1,7 @@
+.group:hover .group-hover-out {
+  animation: spin360 0.5s linear forwards;
+}
+
+.group:not(:hover) .group-hover-out {
+  animation: spin360Reverse 0.5s linear forwards;
+}
