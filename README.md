@@ -1,8 +1,15 @@
-# React + Vite
+# Library Management
+WebSite URL : https://library-6eb65.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ServerSite URL: https://github.com/farjanasabiha/library-management-server
 
-Currently, two official plugins are available:
+For Job Task Added Search functionality on the All Books Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Category: assignment_category_0008
+
+About Library Management Website
+- Responsive Design
+- Dark Mood
+- Eye Catching Design
+- React Tooltip
+- React AweSome Reveal
