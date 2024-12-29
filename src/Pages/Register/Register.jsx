@@ -71,8 +71,8 @@ const Register = () => {
           onSubmit={handleRegister}
           className="flex items-center justify-center flex-col py-32"
         >
-          <h1 className="text-2xl md:text-4xl font-semibold text-[#4b85f0] mb-8">
-            Please Register Here !
+          <h1 className="text-2xl md:text-4xl font-bold uppercase text-[#0c3989] mb-8">
+            Please Register!
           </h1>
           <label className="form-control w-full max-w-xs">
             <div className="label">
@@ -134,15 +134,15 @@ const Register = () => {
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
-                <FaRegEye className="text-lg" />
+                <FaRegEye className="text-lg hover:cursor-pointer text-[#0c3989]" />
               ) : (
-                <FaEyeSlash className="text-lg" />
+                <FaEyeSlash className="text-lg hover:cursor-pointer text-[#0c3989]" />
               )}
             </span>
           </label>
           <p className="text-black font-medium text-sm mt-3 font-face dark:text-white">
             Already Have An account? please{" "}
-            <a href="/login" className="text-[#4b85f0] font-semibold">
+            <a href="/login" className="text-[#0c3989] font-bold uppercase">
               LogIn
             </a>
           </p>
@@ -154,7 +154,7 @@ const Register = () => {
                 text: "",
               });
             }}
-            className="btn mt-5 w-full max-w-xs px-8 bg-[#4b85f0] text-white transition font-semibold duration-300 text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+            className="btn mt-5 w-full max-w-xs px-8 bg-[#0c3989] text-white transition font-semibold duration-300 text-base hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
             type="submit"
             value="Register"
           ></input>

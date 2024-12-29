@@ -76,7 +76,7 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <p className="text-sm md:text-2xl ml-2 font-bold text-black dark:text-white">
+            <p className="text-sm md:text-2xl ml-2 font-bold text-[#0c3989] dark:text-white">
               Library Management
             </p>
           </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 </div>
                 <button
                   onClick={handleSignOut}
-                  className="btn px-4 md:px-8 bg-[#4b85f0] text-white font-semibold text-sm md:text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                  className="btn px-4 md:px-8 bg-[#0c3989] text-white font-semibold text-sm md:text-lg hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#4b85f0]"
                 >
                   Log Out
                 </button>
@@ -132,13 +132,13 @@ const Navbar = () => {
               <div>
                 <a
                   href="/login"
-                  className="btn mr-3 px-4 md:px-8 bg-[#4b85f0] text-white font-normal md:font-semibold  text-xs md:text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                  className="btn mr-3 px-4 md:px-8 bg-[#0c3989] text-white font-normal md:font-semibold  text-xs md:text-lg hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
                 >
                   <button>Login</button>
                 </a>
                 <a
                   href="/register"
-                  className="btn px-3 md:px-8 bg-[#4b85f0] text-white font-normal md:font-semibold text-xs md:text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                  className="btn px-3 md:px-8 bg-[#0c3989] text-white font-normal md:font-semibold text-xs md:text-lg hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
                 >
                   <button>Register</button>
                 </a>

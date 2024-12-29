@@ -62,8 +62,8 @@ const Login = () => {
     <div className="bg-white dark:bg-black">
       <div className="container mx-auto h-screen flex items-center justify-center">
         <div className="flex items-center justify-center flex-col md:py-32">
-          <h1 className="text-xl md:text-4xl font-semibold text-[#4b85f0] mb-8">
-            Please Login Here!
+          <h1 className="text-xl md:text-4xl uppercase font-semibold text-[#0c3989] mb-8">
+            Please Login!
           </h1>
           <form onSubmit={handleLogin} className="space-y-5">
             <label className="input input-bordered flex items-center gap-2 bg-white">
@@ -78,30 +78,31 @@ const Login = () => {
               <input
                 type={showPassword ? "password" : "text"}
                 name="password"
+                placeholder="Password"
                 className="grow"
               />
               <span
                 onClick={() => setShowPassword(!showPassword)}
-                className="text-[#4b85f0] cursor-pointer"
+                className="text-[#0c3989] cursor-pointer"
               >
                 {showPassword ? <FaRegEye /> : <FaEyeSlash />}
               </span>
             </label>
             <input
-              className="btn w-full inline-block px-8 bg-[#4b85f0] text-white transition font-semibold duration-300 text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+              className="btn uppercase w-full inline-block px-8 bg-[#0c3989] text-white transition font-semibold duration-300 text-base hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
               type="submit"
               value="Log In"
             />
             <div className="flex flex-col md:flex-row items-center justify-between gap-3">
               <button
                 onClick={handleGoogleLogin}
-                className="btn bg-[#4b85f0] text-white transition duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                className="btn bg-[#0c3989] text-white transition duration-300  font-medium text-sm uppercase hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
               >
                 Login with Google
               </button>
               <button
                 onClick={handleGithubLogin}
-                className="btn bg-[#4b85f0] text-white transition duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                className="btn bg-[#0c3989] text-white transition duration-300 font-medium text-sm uppercase hover:bg-transparent hover:text-[#0c3989] hover:border-solid hover:border-[#0c3989]"
               >
                 Login with Github
               </button>
@@ -109,7 +110,10 @@ const Login = () => {
 
             <p className="text-black dark:text-white font-medium text-sm text-center">
               New Here? Please{" "}
-              <a href="/register" className="text-[#4b85f0] font-semibold">
+              <a
+                href="/register"
+                className="text-[#0c3989] font-bold uppercase"
+              >
                 Register!
               </a>
             </p>
